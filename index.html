@@ -2707,7 +2707,7 @@ footer {
             <div class="builder-color-chip" style="background:#5865f2" data-col="#5865f2" title="Blurple"></div>
             <div class="builder-color-chip" style="background:#10b981" data-col="#10b981" title="Emerald"></div>
             <div class="builder-color-chip" style="background:#f59e0b" data-col="#f59e0b" title="Amber"></div>
-            <div class="builder-color-chip" style="background:#121516" data-col="#121516" title="Obsidian"></div>
+            <div class="builder-color-chip" style="background:#000000" data-col="#000000" title="Obsidian Black"></div>
           </div>
         </div>
         <div class="builder-field">
@@ -3311,7 +3311,7 @@ function setupEmbedBuilder() {
       const d = descInput.value.trim() || 'Description';
       let cmd = `.embed ${t} | ${d}`;
       const col = colorHex.value.trim();
-      if (col && col !== '#121516') cmd += ` --color ${col}`;
+      if (col && col !== '#000000' && col !== '#121516') cmd += ` --color ${col}`;
       if (imgInput.value.trim()) cmd += ` --image ${imgInput.value.trim()}`;
       if (thumbInput.value.trim()) cmd += ` --thumb ${thumbInput.value.trim()}`;
       if (authName.value.trim()) {
